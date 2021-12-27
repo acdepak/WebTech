@@ -11,26 +11,14 @@ var n=[]; {is empty array}
   </head>
   <body>
     <h3>Array</h3>
-    <table>
-      <tr>
-        <td>Enter name 1:</td>
-        <td><input type="text" id="txtnum1" name="txtnum1" /></td>
-      </tr>
-      <tr>
-        <td>Enter name 2:</td>
-        <td><input type="text" id="txtnum2" name="txtnum2" /></td>
-      </tr>
-      <tr>
-        <td>Enter name 3:</td>
-        <td><input type="text" id="txtnum3" name="txtnum3" /></td>
-      </tr>
-      <tr>
-        <td><input type="button" value="Display" onclick="show()" /></td>
-      </tr>
-      <!-- <tr>
-        <td><div id="txtResult"></div></td>
-      </tr> -->
-    </table>
+    Enter name 1:
+    <input type="text" id="txtnum1" name="txtnum1" /><br />
+    Enter name 2:
+    <input type="text" id="txtnum2" name="txtnum2" /><br />
+    Enter name 3:
+    <input type="text" id="txtnum3" name="txtnum3" /><br />
+    <input type="button" value="Display" onclick="show()" /><br />
+    <div id="txtresult"></div>
   </body>
   <script>
     function show() {
@@ -39,7 +27,8 @@ var n=[]; {is empty array}
       name[1] = document.getElementById("txtnum2").value;
       name[2] = document.getElementById("txtnum3").value;
       for (var i = 0; i < 3; i++) {
-        alert(name[i]);
+        document.getElementById("txtresult").innerHTML = name + " are Friends.";
+        // alert(name[i]);
       }
     }
   </script>
