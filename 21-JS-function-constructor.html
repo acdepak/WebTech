@@ -4,23 +4,15 @@
     <title>SumOfDigits</title>
   </head>
   <body>
-    <h3>sum of digits</h3>
-    <table>
-      <tr>
-        <td>Enter a number:</td>
-        <td><input type="text" id="txtnum" name="txtnum" /></td>
-      </tr>
-      <tr>
-        <td><input type="button" value="Calculate" onclick="sumdigits()" /></td>
-      </tr>
-      <tr>
-        <td><div id="txtResult"></div></td>
-      </tr>
-    </table>
+    <h3>Sum of digits</h3>
+    Enter number: <input type="text" id="txtnum1" name="txtnum1" /><br />
+    <input type="button" value="Calculate" onclick="sumdigits()" /><br />
+    <div id="txtResult"></div>
   </body>
+
   <script>
     function sumdigits() {
-      var n = Number(document.getElementById("txtnum").value);
+      var n = Number(document.getElementById("txtnum1").value);
       var sum = 0;
       var r = 0;
       while (n > 0) {
@@ -28,7 +20,8 @@
         sum = sum + r;
         n = Math.floor(n / 10); //n=mainfloor(n/10)
       }
-      document.getElementById("txtResult").innerHTML = sum;
+      document.getElementById("txtResult").innerHTML =
+        "Sum of digits is " + sum + ".";
     }
   </script>
 </html>
