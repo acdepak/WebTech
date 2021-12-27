@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd : schema="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="student">
+        <xsd: ComplexType>
+            <xsd: sequence>
+                <xsd: element name="name" type="xsd:string"/>
+                <xsd: element name="phone" type="xsd:string"/>
+                <xsd: element name="email" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:ComplexType>
+    </xsd:element>
+</xsd:schema>

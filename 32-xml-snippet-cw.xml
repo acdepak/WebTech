@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE Books[
+<!ELEMENT book (name,author,pages,price?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST book id CDATA #IMPLIED>
+]>
+    <Books>
+        <book category="science">
+            <id>156</id>
+            <name>WebTech</name>
+            <author>Ram</author>
+            <author>Hari</author>
+            <pages>150</pages>
+            <price>1500</price>
+        </book>
+        <book category="science">
+            <id>167</id>
+            <name>WebTech</name>
+            <author>Kamal</author>
+            <pages>1200</pages>
+            <price>1500</price>
+        </book>
+    </Books>
+        
