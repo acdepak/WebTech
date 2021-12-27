@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>CSS Layout</title>
+    <style>
+      #container {
+        width: 800px;
+        height: 800px;
+        background-color: red;
+        margin: auto;
+      }
+
+      #banner {
+        width: 800px;
+        height: 100;
+        background-color: gray;
+        float: left;
+        background-image: url("files/37.jpg");
+      }
+
+      #myheading {
+        font-family: Verdana, serif;
+        font-size: 39px;
+        letter-spacing: 2.6px;
+        word-spacing: 3.2px;
+        color: blue;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: small-caps;
+        text-transform: none;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(206, 89, 55, 0.5);
+        text-shadow: 5px 9px 2px rgba(206, 89, 55, 0.93);
+      }
+
+      #menu {
+        width: 100px;
+        height: 600px;
+        background-color: yellow;
+        float: left;
+      }
+
+      #content {
+        width: 690px;
+        height: 590px;
+        background-color: green;
+        float: left;
+        border: 5px Solid red;
+      }
+
+      #content img {
+        width: 500px;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 100px;
+        border-radius: 300px;
+      }
+
+      #content img:hover {
+        width: 500px;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 100px;
+        border-radius: 200px;
+      }
+
+      #footer {
+        width: 800;
+        height: 100;
+        background-color: blue;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="banner">
+        <h1 id="myheading">Inderni College</h1>
+      </div>
+      <div id="menu"></div>
+      <div id="content">
+        <img src="files/37.jpg" />
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

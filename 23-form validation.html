@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormInJS</title>
+  </head>
+  <body>
+    <h3>Create Account</h3>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" id="tname" name="tname" /></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" id="tpwd" name="tpwd" /></td>
+      </tr>
+      <tr>
+        <td>Confirm Password</td>
+        <td><input type="password" id="tcpwd" name="tcpwd" /></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" id="tmail" name="tmail" /></td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td><input type="number" id="tage" name="tage" /></td>
+      </tr>
+      <tr>
+        <td>Course</td>
+        <td>
+          <select name="tcourse" id="tcourse">
+            <option value="Select">Select</option>
+            <option value="BCA">BCA</option>
+            <option value="BIM">BIM</option>
+            <option value="BIT">BIT</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <form>
+            <input type="radio" id="male" name="gender" value="male" />Male
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+            />Female
+            <input type="radio" id="other" name="gender" value="other" /> Other
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Submit" onclick="submit()" /></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function submit() {
+      //Check if name is empty or not
+      var name = document.getElementById("tname").value;
+      if (name == "") {
+        alert("Please enter name");
+        return;
+      }
+      //Check if age is empty or not
+      var age = document.getElementById("tage").value;
+      if (age == "") {
+        alert("Please enter age");
+        return;
+      }
+      //Password xa ki nai
+      var pwd = document.getElementById("tpwd").value;
+      if (pwd.length <= 8) alert("Please enter password of length 8 or more");
+      // Password comparing
+      var pwd = document.getElementById("tpwd").value;
+      var cpwd = document.getElementById("tcpwd").value;
+      if (pwd.localeCompare(cpwd) != 0) {
+        alert("Password and confirm password aren't same.");
+        return;
+      }
+      //Check if entered data is in proper email format
+      var email = document.getElementById("tmail").value;
+      var at = email.indexOf("@");
+      var dot = email.indexOf(".");
+      if (at > 0 && dot - at >= 2) {
+      } else {
+        alert("please enter correct email address");
+        return;
+      }
+
+      //Check if course is selected or not
+      var course = document.getElementById("tcourse").value;
+      if (course == "Select") {
+        alert("please enter correct course");
+        return;
+      }
+      //Check if one of the gender is selected or not
+      var x = document.getElementById("male").checked;
+      var y = document.getElementById("female").checked;
+      var z = document.getElementById("other").checked;
+      if (x != true && y != true && z != true) {
+        alert("Please choose your gender");
+      } else {
+      }
+    }
+  </script>
+</html>
+
+<!-- 
+    Form Validation
+    
+    -1 How to check empty textboxes
+    -2 How to check radio button is selected or not
+    -3 How to check user entered data is email or not.
+    -4 Password and confirm password match or not.
+
+    1. var name = document.getElementById("txtname").value;
+        if(name==""){
+            alert("please enter name");
+            return;
+        }
+
+    4. var pwd = document.getElementById("txtpwd").value;
+        var cpwd=document.getElementById("txtcpwd").value;
+        if(pwd.localecompare(cpwd)!=0)
+            {
+                alert("please confirm password and confirm password");
+                return;
+            }
+
+
+    3. var email=document.getElementById("txtemail").value;
+        var at=email.indexOf("@");
+        var dot=email.indexOf(".");
+        if(at>0 && dot-at>=2)
+        {
+
+        }
+        else{
+            alert("please enter correct email address");
+        return;
+    }
+ 
+    2. var course =document.getElementById("ddlcourse").value;
+        if(course=="select")
+        {
+            alert("please enter correct");
+            return;
+        }
+
+    3. var x = document.getElementById("male").checked;
+          var y = document.getElementById("female").checked;
+          if (x != true && y != true){
+          alert("please Choose your gender");
+          }
+          else
+          {}
+
+-->

@@ -1,0 +1,27 @@
+<!-- write a javascript program to input radius of circle and display its area. -->
+<html>
+  <head>
+    <title>Circle</title>
+  </head>
+  <body>
+    <h3>Area of Circle</h3>
+    <table>
+      <tr>
+        <td>Radius:</td>
+        <td><input type="number" name="radi" id="radi" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="cal()" /></td>
+      </tr>
+      <tr><td><div id="are"></div></td></tr></table>
+    </table>
+  </body>
+
+  <script>
+      function cal(){
+        var r=document.getElementById("radi").value;
+            var A = (Number(r)**2)*22/7;
+          document.getElementById("are").innerHTML="Area of Circle = " + A;
+      }
+  </script>
+</html>

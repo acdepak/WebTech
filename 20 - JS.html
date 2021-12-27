@@ -1,0 +1,49 @@
+<!-- WAP in JS to input a no. and display it is prime no. or not   -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime</title>
+  </head>
+  <body>
+    <h3>Prime or Composite</h3>
+
+    <table>
+      <tr>
+        <td>Enter a Number</td>
+        <td><input type="text" id="txtnum" name="txtnum" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="prime()" /></td>
+      </tr>
+      <tr>
+        <td><div id="txtResult"></div></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function prime() {
+      var n = Number(document.getElementById("txtnum").value);
+      var c = 0;
+      var i = 0;
+
+      if (n == 1) {
+        document.getElementById("txtResult").innerHTML =
+          "1 is neither Prime or Composite.";
+      } else if (n > 1) {
+        for (i = 2; i < n; i++) {
+          if (n % i == 0) {
+            c = c + 1;
+          }
+        }
+
+        if (c == 0) document.getElementById("txtResult").innerHTML = "Prime";
+        else document.getElementById("txtResult").innerHTML = "Composite";
+      } else {
+        document.getElementById("txtResult").innerHTML =
+          "Zero is neither prime nor composite.";
+      }
+    }
+  </script>
+</html>

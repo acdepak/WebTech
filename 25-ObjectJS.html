@@ -1,0 +1,45 @@
+<!-- WAP in JS to input two no. and display which is greater -->
+<html>
+  <head>
+    <title>Greater number</title>
+  </head>
+  <body>
+    <h3>Greater number Using Object</h3>
+    <table>
+      <tr>
+        <td>Number 1</td>
+        <td><input type="number" id="t1" name="t1" /></td>
+      </tr>
+      <tr>
+        <td>NUmber 2</td>
+        <td><input type="number" id="t2" name="t2" /></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Compare" onclick="greaterN()" /><br />
+        </td>
+      </tr>
+      <tr>
+        <td><p id="results"></p></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    const compare = {
+      a: 0,
+      b: 0,
+      comp: function () {
+        if (this.a > this.b) {
+          document.getElementById("results").innerHTML = this.a + " is Larger.";
+        } else {
+          document.getElementById("results").innerHTML = this.b + " is Larger.";
+        }
+      },
+    };
+    function greaterN() {
+      compare.a = Number(document.getElementById("t1").value);
+      compare.b = Number(document.getElementById("t2").value);
+      compare.comp();
+    }
+  </script>
+</html>

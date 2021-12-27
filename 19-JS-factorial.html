@@ -1,0 +1,42 @@
+<!-- WAP in JS to input a no. and display it is divisible by 5 and not 11 -->
+
+<!-- WAP in JS to input a no. and display its factorial -->
+
+<html>
+  <head>
+    <title>Factorial</title>
+  </head>
+  <body>
+    <h3>Factorial of a Number</h3>
+    <!-- <table>
+      <tr>
+        <td>Number</td>
+        <td><input type="text" id="factorial" name="factorial  " /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="fact()" /></td>
+      </tr>
+      <tr>
+        <td><div id="result"></div></td>
+      </tr>
+    </table> -->
+    Input a Number:
+    <input type="text" id="factorial" name="factorial  " /><br /><br />
+    <input type="button" value="Calculate" onclick="fact()" />
+    <div id="result">
+  </body>
+  <script>
+    function fact() {
+      var n = Number(document.getElementById("factorial").value);
+      var f = 1;
+      if (n == 0 || n == 1) return f;
+      else {
+        for (var i = n; i >= 1; i--) {
+          f = f * i;
+        }
+      }
+      document.getElementById("result").innerHTML =
+        "Factorial of " + n + " is " + f +".";
+    }
+  </script>
+</html>

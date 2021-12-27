@@ -1,0 +1,54 @@
+<!-- Array
+var n="Ram"; {is a array}
+var n=[]; {is empty array}
+-->
+
+<!-- WAP in JS to input 3 name and store in array and display it -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h3>Array</h3>
+    <table>
+      <tr>
+        <td>Enter name 1:</td>
+        <td><input type="text" id="txtnum1" name="txtnum1" /></td>
+      </tr>
+      <tr>
+        <td>Enter name 2:</td>
+        <td><input type="text" id="txtnum2" name="txtnum2" /></td>
+      </tr>
+      <tr>
+        <td>Enter name 3:</td>
+        <td><input type="text" id="txtnum3" name="txtnum3" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Display" onclick="show()" /></td>
+      </tr>
+      <!-- <tr>
+        <td><div id="txtResult"></div></td>
+      </tr> -->
+    </table>
+  </body>
+  <script>
+    function show() {
+      var name = [];
+      name[0] = document.getElementById("txtnum1").value;
+      name[1] = document.getElementById("txtnum2").value;
+      name[2] = document.getElementById("txtnum3").value;
+      for (var i = 0; i < 3; i++) {
+        alert(name[i]);
+      }
+    }
+  </script>
+</html>
+
+<!-- Array Functions -->
+<!-- .sort()
+     .rsort()
+     .join() -->

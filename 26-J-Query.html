@@ -1,0 +1,29 @@
+<!-- WAP to add two numbers using Jquery -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery-add2no.</title>
+    <script src="jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    val 1 <input type="text" id="t1" name="t1" /><br />
+    val 2 <input type="text" id="t2" name="t2" /> <br />
+    sum<input type="button" value="sum" onclick="add()" /><br />
+    result <input type="text" id="txtresult" name="t4" />
+  </body>
+  <script>
+    function add() {
+      //   var a = Number($("#t1").val());
+      //   var b = Number($("#t2").val());
+      //   var c = a + b;
+      //   $("#txtresult").val(c);
+
+      $("#txtresult").val(Number($("#t1").val()) + Number($("#t2").val()));
+    }
+  </script>
+</html>

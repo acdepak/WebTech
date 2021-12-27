@@ -1,0 +1,30 @@
+<!-- write a javascript program to input length and breath of rectangle and display its area and perimeter. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rectangle</title>
+    <body>
+      <h3>Area and Perimeter of Rectangle</h3>
+      <table>
+        <tr>
+          <td>Length: </td><td><input type="number" name="s1" id="s1" /></td>
+          <tr><td>Breadth: </td><td><input type="number" name="s2" id="s2"></td></tr>
+          <tr><td><input type="button" value="calculate" onclick="calculate()"></td></tr>
+          <tr><td><div id="area" name="area"></div></td></tr>
+          <tr><td><div id="peri" name="peri"></div></td></tr>
+        </tr>
+      </table>
+    </body>
+
+    <script>
+        function calculate(){
+            var s1 =document.getElementById("s1").value;
+            var s2=document.getElementById("s2").value;
+            var A = (Number(s1)*Number(s2));
+            var P = (2 * (Number(s1) + Number(s2))); 
+            document.getElementById("area").innerHTML="Area of Rectangle = "+A;
+            document.getElementById("peri").innerHTML="Perimeter of Rectangle = "+P;
+        }
+    </script>
+  </head>
+</html>

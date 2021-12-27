@@ -1,0 +1,38 @@
+<!-- WAP in IS to input a number and display if it is even or odd. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Even or Odd</title>
+  </head>
+  <body>
+    <h3>Even or Odd</h3>
+    <table>
+      <tr>
+        <td>Enter a number:</td>
+        <td><input type="Number" name="num" id="num" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="check()" /></td>
+      </tr>
+      <tr>
+        <td><div id="txtResult"></div></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function check() {
+      var n = Number(document.getElementById("num").value);
+      if (n % 2 == 0) {
+        document.getElementById("txtResult").innerHTML =
+          "Number " + n + " is Even.";
+      } else {
+        document.getElementById("txtResult").innerHTML =
+          "Number " + n + " is Odd.";
+      }
+    }
+  </script>
+</html>

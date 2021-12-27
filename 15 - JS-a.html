@@ -1,0 +1,46 @@
+<!-- HTML FORM (GUI DESIGN)
+Give ID to each Controls
+Add event (eg. onclick) on the control form where you want to start action (function)
+Define function in script block.
+-->
+<!-- write a javascript program to input two numbersand display the sum. -->
+
+<html>
+  <head>
+    <title>sum of two numbers</title>
+  </head>
+
+  <body>
+    <b>Sum of two numbers</b>
+    <table>
+      <tr>
+        <td>Input 1:</td>
+        <td><input type="text" id="t1" name="t1" /></td>
+      </tr>
+      <tr>
+        <td>Input 2:</td>
+        <td><input type="text" id="t2" name="t2" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Add" onclick="sum()" /></td>
+      </tr>
+      <tr>
+        <td>Result:</td>
+        <td><input type="text" id="txtresult" name="t4" /></td>
+      </tr>
+    </table>
+  </body>
+
+  <script>
+    function sum() {
+      var t1 = document.getElementById("t1").value;
+      var t2 = document.getElementById("t2").value;
+      // var c = Number(t1) + Number(t2);
+      // document.getElementById("txtresult").value = c;
+
+      // var txtresult = document.getElementById("t1").value;
+      txtresult.value = parseInt(t1) + parseInt(t2);
+      // alert("sum of two numbers is: " + c);
+    }
+  </script>
+</html>

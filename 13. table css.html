@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Table CSS</title>
+    <style>
+      #list {
+        font-family: Arial;
+        border-collapse: collapse;
+        width: 50%;
+      }
+
+      #list td,
+      #list th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #list tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #list tr:hover {
+        background-color: rgb(192, 248, 243);
+      }
+
+      #list th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #a6ecb2;
+        color: #043d0e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS in Table</h1>
+    <table id="list">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ram</td>
+          <td>10</td>
+          <td>554173</td>
+        </tr>
+        <tr>
+          <td>shyam</td>
+          <td>22</td>
+          <td>552458</td>
+        </tr>
+        <tr>
+          <td>gita</td>
+          <td>23</td>
+          <td>552794</td>
+        </tr>
+        <tr>
+          <td>sita</td>
+          <td>17</td>
+          <td>554628</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

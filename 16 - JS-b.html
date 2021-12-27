@@ -1,0 +1,45 @@
+<!-- write a javascript program to input principle, rate of interest and time and display the SI. -->
+
+<html>
+  <head>
+    <title>Simple Interest</title>
+  </head>
+
+  <body>
+    <h2>Simple Interest Calculator</h2>
+    <table>
+      <tr>
+        <td>Principal:</td>
+        <td><input type="text" name="p" id="p" placeholder="Pincipal" /></td>
+      </tr>
+      <tr>
+        <td>Rate:</td>
+        <td><input type="text" name="r" id="r" placeholder="Rate" /></td>
+      </tr>
+      <tr>
+        <td>Time:</td>
+        <td>
+          <input type="text" name="t" id="t" placeholder="Time in years" />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" value="calculate" onclick="si()" /></td>
+      </tr>
+      <tr>
+        <td><div id="i"></div></td>
+      </tr>
+    </table>
+  </body>
+
+  <script>
+    function si() {
+      var p = document.getElementById("p").value;
+      var r = document.getElementById("r").value;
+      var t = document.getElementById("t").value;
+      var result = (Number(p) * Number(r) * Number(t)) / 100;
+      document.getElementById("i").innerHTML = "Simple Interest is: " + result;
+      //   var result = document.getElementById("t1").value;
+      //   i.value = (parseInt(p) * parseInt(r) * parseInt(t)) / 100;
+    }
+  </script>
+</html>

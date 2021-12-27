@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate</title>
+
+    <style>
+      #mydiv {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: rgb(228, 238, 89);
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div id="mydiv">Pradeep is cool.</div>
+    <br />
+    <br />
+    <input type="button" value="click" id="Jem" onclick="Jem()" />
+  </body>
+
+  <script>
+    function Jem() {
+      $("#mydiv").animate({
+        top: 200,
+        left: 500,
+        width: 800,
+        height: 400,
+        backgroundColor: "rgb(89, 238, 193)",
+        color: "red",
+      });
+    }
+  </script>
+</html>

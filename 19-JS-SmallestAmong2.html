@@ -1,0 +1,42 @@
+<!--              input 2 numbers and display smallest no. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmallestAmongTwo</title>
+  </head>
+  <body>
+    <h3>Smallest Among Two Numbers</h3>
+    <table>
+      <tr>
+        <td>Number 1</td>
+        <td><input type="Number" id="num1" name="num1" /></td>
+      </tr>
+      <tr>
+        <td>Number 2</td>
+        <td><input type="Number" id="num2" name="num2" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Compare" onclick="small()" /></td>
+      </tr>
+      <tr>
+        <td><div id="result"></div></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function small() {
+      var a = Number(document.getElementById("num1").value);
+      var b = Number(document.getElementById("num2").value);
+      if (a < b) {
+        document.getElementByID("result").innerHTML = a + " is smaller.";
+      } else {
+        document.getElementById("result").innerHTML = b + " is smaller.";
+      }
+      //document.getElementById("result").innerHTML =
+      // Math.min(a1, b2) + " is smaller.";
+    }
+  </script>
+</html>

@@ -1,0 +1,43 @@
+<!-- Object in JS   -->
+<!-- WAP in JS to input two number and display their sum using object method-->
+
+<html>
+  <head>
+    <title>SumUsingObject</title>
+  </head>
+  <body>
+    <h3>Sum Using Object</h3>
+    <table>
+      <tr>
+        <td>Number 1</td>
+        <td><input type="text" id="t1" name="t1" /></td>
+      </tr>
+      <tr>
+        <td>Number 2</td>
+        <td><input type="text" id="t2" name="t2" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="SUM" onclick="getSum()" /></td>
+      </tr>
+      <tr>
+        <td><p id="Sum"></p></td>
+      </tr>
+    </table>
+
+    <!-- result <input type="text" id="txtresult" name="t4" /> -->
+  </body>
+  <script>
+    const sum = {
+      a: 0,
+      b: 0,
+      Add: function () {
+        document.getElementById("Sum").innerHTML = "Sum is " + this.a + this.b;
+      },
+    };
+    function getSum() {
+      sum.a = Number(document.getElementById("t1").value);
+      sum.b = Number(document.getElementById("t2").value);
+      sum.Add();
+    }
+  </script>
+</html>

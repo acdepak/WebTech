@@ -1,0 +1,34 @@
+<!-- WAP in JS to input a no. and display sum of digits   -->
+<html>
+  <head>
+    <title>SumOfDigits</title>
+  </head>
+  <body>
+    <h3>sum of digits</h3>
+    <table>
+      <tr>
+        <td>Enter a number:</td>
+        <td><input type="text" id="txtnum" name="txtnum" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="sumdigits()" /></td>
+      </tr>
+      <tr>
+        <td><div id="txtResult"></div></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function sumdigits() {
+      var n = Number(document.getElementById("txtnum").value);
+      var sum = 0;
+      var r = 0;
+      while (n > 0) {
+        r = n % 10;
+        sum = sum + r;
+        n = Math.floor(n / 10); //n=mainfloor(n/10)
+      }
+      document.getElementById("txtResult").innerHTML = sum;
+    }
+  </script>
+</html>

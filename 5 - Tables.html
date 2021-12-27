@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Tables in HTML</title>
+  </head>
+
+  <body>
+    <h1>Simple table (traditional way)</h1>
+    <table border="1" cellspacing="4" cellpadding="5" width="15%" height="100">
+      <caption>
+        Simple Table
+      </caption>
+      <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Age</td>
+      </tr>
+      <tr>
+        <td>Ramesh</td>
+        <td>Kathmandu</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>Suresh</td>
+        <td>Narangarh</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Kripesh</td>
+        <td>Butwal</td>
+        <td>33</td>
+      </tr>
+    </table>
+
+    <h1>Simple table (Modern way)</h1>
+    <table border="1">
+      <caption>
+        Simple Table
+      </caption>
+      <thead>
+        <tr>
+          <td>Products</td>
+          <td>Cost</td>
+          <td>Quantity</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Earrings</td>
+          <td>250</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Nail Polish</td>
+          <td>100</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>350</td>
+          <td>35</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h1>Table with Span(Merge Cells)</h1>
+    <table border="1">
+      <tr>
+        <td colspan="3">Statistics</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Student</td>
+        <td>Boys</td>
+        <td>500</td>
+      </tr>
+
+      <tr>
+        <td>Girls</td>
+        <td>400</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Total</td>
+        <td>900</td>
+      </tr>
+    </table>
+  </body>
+</html>

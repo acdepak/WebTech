@@ -1,0 +1,38 @@
+<!--       input age of a person and display he/she can vote or not -->
+
+<html>
+  <head>
+    <title>Voting-Age</title>
+  </head>
+  <body>
+    <h3>Voting Eligibility</h3>
+    <!-- <table>
+      <tr>
+        <td>Enter your age</td>
+        <td><input type="Number" id="num1" name="num1" /></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="Check" onclick="vote()" /></td>
+      </tr>
+      <tr>
+        <td><div id="result"></div></td>
+      </tr>
+    </table> -->
+    Enter your age: <input type="Number" id="num1" name="num1" /><br />
+    <input type="button" value="Check" onclick="vote()" /><br />
+    <div id="result"></div>
+  </body>
+  <script>
+    function vote() {
+      var age = Number(document.getElementById("num1").value);
+
+      if (age >= 18) {
+        document.getElementById("result").innerHTML =
+          "You are Eligible to vote.";
+      } else
+        document.getElementById("result").innerHTML =
+          "You aren't Eligible to vote.";
+    }
+  </script>
+</html>

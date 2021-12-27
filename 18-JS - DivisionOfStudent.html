@@ -1,0 +1,40 @@
+<!-- WAP in JS to input percentage of a student and display division -->
+
+<html>
+  <head>
+    <title>Division</title>
+    <!-- <style>
+#txtResult {
+  color: rgb(99, 14, 14);
+}
+</style> -->
+  </head>
+  <body>
+    <h3>Division of students</h3>
+    <table>
+      <tr>
+        <td>Enter percentage:</td>
+        <td><input type="Number" name="num" id="num" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="Calculate" onclick="div()" /></td>
+      </tr>
+      <tr>
+        <td><div id="txtResult"></div></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function div() {
+      var d = "";
+      var n = Number(document.getElementById("num").value);
+      if (n >= 80 && n <= 100) d = "!!!Distinction!!! :D";
+      else if (n >= 60 && n < 80) d = "!!!First Division!! :)";
+      else if (n >= 50 && n < 60) d = "!!Second Division!! :|";
+      else if (n >= 40 && n < 50) d = "!!Third Division!";
+      else if (n < 40 && n >= 0) d = "!You have failed :(";
+      else if (n < 0 || n > 100) d = "!Wrong Input!!";
+      document.getElementById("txtResult").innerHTML = d;
+    }
+  </script>
+</html>
