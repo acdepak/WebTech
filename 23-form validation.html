@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>FormInJS</title>
+    <title>ValidFormInJS</title>
   </head>
   <body>
     <h3>Create Account</h3>
@@ -86,14 +86,14 @@
       var dot = email.indexOf(".");
       if (at > 0 && dot - at >= 2) {
       } else {
-        alert("please enter correct email address");
+        alert("Please enter correct email address");
         return;
       }
 
       //Check if course is selected or not
       var course = document.getElementById("tcourse").value;
       if (course == "Select") {
-        alert("please enter correct course");
+        alert("Please enter correct course");
         return;
       }
       //Check if one of the gender is selected or not
@@ -103,6 +103,7 @@
       if (x != true && y != true && z != true) {
         alert("Please choose your gender");
       } else {
+        alert("Your account has been created.");
       }
     }
   </script>
