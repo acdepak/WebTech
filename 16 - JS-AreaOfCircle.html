@@ -5,23 +5,24 @@
   </head>
   <body>
     <h3>Area of Circle</h3>
-    <table>
-      <tr>
-        <td>Radius:</td>
-        <td><input type="number" name="radi" id="radi" /></td>
-      </tr>
-      <tr>
-        <td><input type="button" value="Calculate" onclick="cal()" /></td>
-      </tr>
-      <tr><td><div id="are"></div></td></tr></table>
-    </table>
+    <form id="myform">
+      Radius:
+      <input type="text" id="radi" /><br />
+      <input type="button" value="Calculate" onclick="cal()" />
+      <input type="button" value="Clear" onclick="cle()" /><br />
+      <div id="are"></div>
+    </form>
   </body>
 
   <script>
-      function cal(){
-        var r=document.getElementById("radi").value;
-            var A = (Number(r)**2)*22/7;
-          document.getElementById("are").innerHTML="Area of Circle = " + A;
-      }
+    function cal() {
+      var r = document.getElementById("radi").value;
+      var A = (Number(r) ** 2 * 22) / 7;
+      document.getElementById("are").innerHTML = "Area of Circle = " + A;
+    }
+    function cle() {
+      document.getElementById("myform").reset();
+      document.getElementById("are").innerHTML = " ";
+    }
   </script>
 </html>
