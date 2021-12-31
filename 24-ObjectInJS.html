@@ -10,16 +10,15 @@
     Number 1: <input type="text" id="t1" onfocus="this.value=''" /><br />
     Number 2: <input type="text" id="t2" onfocus="this.value=''" /><br />
     <input type="button" value="Add" onclick="getSum()" /><br />
-    <!-- <input type="button" value="Clear" onclick="clear()" /><br /> -->
-    <p id="Sum"></p>
-    <!-- result <input type="text" id="txtresult" name="t4" /> -->
+    Result : <input type="text" id="adding" />
+    <!-- <p id="adding"></p> -->
   </body>
   <script>
     const sum = {
       a: 0,
       b: 0,
       Add: function () {
-        document.getElementById("Sum").innerHTML = this.a + this.b;
+        document.getElementById("adding").value = this.a + this.b;
       },
     };
     function getSum() {
@@ -28,7 +27,8 @@
       sum.Add();
     }
     // function clear() {
-    //   document.getElementById("Sum").innerHTML = " ";
+    // document.getElementById("t1").value = "";
+    //   document.getElementById("adding").innerHTML = " ";
     // }
   </script>
 </html>
