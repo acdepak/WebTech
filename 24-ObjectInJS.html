@@ -8,15 +8,11 @@
   <body>
     <h3>Sum Using Object</h3>
 
-    Number 1
-    <input type="text" id="t1" name="t1" />
-
-    Number 2
-    <input type="text" id="t2" name="t2" />
-
-    <input type="button" value="SUM" onclick="getSum()" />
-
+    Number 1: <input type="text" id="t1" name="t1" /><br />
+    Number 2: <input type="text" id="t2" name="t2" /><br />
+    <input type="button" value="Add" onclick="getSum()" /><br />
     <p id="Sum"></p>
+    <br />
 
     <!-- result <input type="text" id="txtresult" name="t4" /> -->
   </body>
@@ -25,7 +21,8 @@
       a: 0,
       b: 0,
       Add: function () {
-        document.getElementById("Sum").innerHTML = "Sum is " + this.a + this.b;
+        document.getElementById("Sum").innerHTML =
+          "Sum is " + this.a + this.b + ".";
       },
     };
     function getSum() {
