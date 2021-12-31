@@ -7,13 +7,11 @@
   </head>
   <body>
     <h3>Sum Using Object</h3>
-
-    Number 1: <input type="text" id="t1" name="t1" /><br />
-    Number 2: <input type="text" id="t2" name="t2" /><br />
+    Number 1: <input type="text" id="t1" onfocus="this.value=''" /><br />
+    Number 2: <input type="text" id="t2" onfocus="this.value=''" /><br />
     <input type="button" value="Add" onclick="getSum()" /><br />
+    <!-- <input type="button" value="Clear" onclick="clear()" /><br /> -->
     <p id="Sum"></p>
-    <br />
-
     <!-- result <input type="text" id="txtresult" name="t4" /> -->
   </body>
   <script>
@@ -21,8 +19,7 @@
       a: 0,
       b: 0,
       Add: function () {
-        document.getElementById("Sum").innerHTML =
-          "Sum is " + this.a + this.b + ".";
+        document.getElementById("Sum").innerHTML = this.a + this.b;
       },
     };
     function getSum() {
@@ -30,5 +27,8 @@
       sum.b = Number(document.getElementById("t2").value);
       sum.Add();
     }
+    // function clear() {
+    //   document.getElementById("Sum").innerHTML = " ";
+    // }
   </script>
 </html>
