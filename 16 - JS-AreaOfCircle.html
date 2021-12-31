@@ -10,6 +10,7 @@
       <input type="text" id="radi" /><br />
       <input type="button" value="Calculate" onclick="cal()" />
       <input type="button" value="Clear" onclick="cle()" /><br />
+      <!-- <input type="text" id="are" /><br /> -->
       <div id="are"></div>
     </form>
   </body>
@@ -19,6 +20,8 @@
       var r = document.getElementById("radi").value;
       var A = (Number(r) ** 2 * 22) / 7;
       document.getElementById("are").innerHTML = "Area of Circle = " + A;
+      // document.getElementById("are").value = "Area of Circle = " + A;
+      // use '.value'when using <input> else use '.innerHTML' for <div> and <p>
     }
     function cle() {
       document.getElementById("myform").reset();
